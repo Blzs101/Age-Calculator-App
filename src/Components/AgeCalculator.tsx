@@ -71,7 +71,7 @@ export function AgeCalculator() {
             year: e.target.value,
         })
     }
-    function checkAge(e: React.FormEvent<HTMLInputElement>) {
+    function checkAge(e: any) {
         e.preventDefault();
         const currentDay = new Date().getDate();
         const currentMonth = new Date().getMonth() + 1;
@@ -100,7 +100,7 @@ export function AgeCalculator() {
     const years = Array.from({ length: currentYear - startYear + 1 }, (_, index) => startYear + index);
     return (
         <div className="w-[400px] h-[300px] bg-white ml-auto text-black mr-auto mt-10 border-t rounded-tl-xl rounded-tr-xl rounded-br-[100px] rounded-bl-xl">
-            <form className="flex p-8 " onSubmit={() => checkAge}>
+            <form className="flex p-8 " onSubmit={checkAge}>
                 <div>
                     <p className="p-1 text-xs text-start">Day</p>
                     <select placeholder="DD" className="number-input bg-white font-bold w-[75px] p-2 mr-4 border border-solid border-gray-500 rounded-md" value={getInitialDate.day} onChange={setDay}>
