@@ -104,7 +104,7 @@ export function AgeCalculator() {
                 <div>
                     <p className="p-1 text-xs text-start">Day</p>
                     <select placeholder="DD" className="number-input bg-white font-bold w-[75px] p-2 mr-4 border border-solid border-gray-500 rounded-md" value={getInitialDate.day} onChange={setDay}>
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31].map((e, key) => {
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31].map((e: number, key: number) => {
                             return <option key={key} className="p-0 m-0 ">{e}</option>
                         })}
                     </select>
@@ -112,7 +112,7 @@ export function AgeCalculator() {
                 <div>
                     <p className="p-1 text-xs text-start">Month</p>
                     <select placeholder="MM" className="number-input bg-white font-bold w-[120px] p-2 mr-4 border border-solid border-gray-500 rounded-md" onChange={setMonth}>
-                        {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((e, key) => {
+                        {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((e: string, key: number) => {
                             return <option key={key}>{e}</option>
 
                         })}
@@ -121,7 +121,7 @@ export function AgeCalculator() {
                 <div>
                     <p className="p-1 text-xs text-start">Year</p>
                     <select placeholder="YYYY" className="number-input bg-white font-bold w-[75px] p-2 border border-solid border-gray-500 rounded-md" value={getInitialDate.year} onChange={setYear}>
-                        {years.map((e, key) => {
+                        {years.map((e: number, key: number) => {
                             return <option key={key}>{e}</option>
                         })}
                     </select>
